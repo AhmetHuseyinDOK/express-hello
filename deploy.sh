@@ -12,4 +12,4 @@ echo 'files cloned'
 echo 'getting dependencies'
 ssh ubuntu@$machine -i ~/Documents/script/ahmet-huseyin.pem "cd express-hello && npm install"
 echo 'got dependecies'
-ssh ubuntu@$machine -i ~/Documents/script/ahmet-huseyin.pem "cd express-hello && sudo killall node && sudo nohup PORT=80 npm start &"
+ssh ubuntu@$machine -i ~/Documents/script/ahmet-huseyin.pem "cd express-hello && sudo killall node && sudo PORT=80 npm start-bg"
