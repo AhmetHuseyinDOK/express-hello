@@ -3,7 +3,7 @@ const app = express()
 const port = process.env.PORT || 3000
 import axios from 'axios';
 app.get('/', async (req, res) => {
-    let {data} = await axios.get("http://www.mocky.io/v2/5185415ba171ea3a00704eed")
+    let {data} = await axios.get("http://169.254.169.254/latest/meta-data/public-hostname")
     res.send(data);
 })
 
