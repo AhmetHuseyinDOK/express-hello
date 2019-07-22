@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node -r esm ./index.js",
-    "start-bg": "pm2 start -r esm ./index.js",
+    "start-bg": "pm2 start  ./index.js --node-args='-r esm'",
     "deploy": "sh ./deploy.sh",
     "deploy-multiple": "sh ./deploy-multiple.sh"
   },
