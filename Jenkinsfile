@@ -4,8 +4,12 @@ pipeline {
         stage('Build') {
             steps {
                 bat 'npm install'
-                bat 'compact .'
-                bat 'dir'
+                sh  'Compress-Archive * out.zip'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                bat 'echo deployed'
             }
         }
     }
