@@ -1,14 +1,11 @@
 pipeline {
     agent any
     stages {
-        stage('build') {
+        stage('Build') {
             steps {
                 bat 'npm install'
-            }
-        }
-        stage('deploy') {
-            steps {
-                bat 'pm2 start index.js'
+                bat 'compact .'
+                bat 'dir'
             }
         }
     }
