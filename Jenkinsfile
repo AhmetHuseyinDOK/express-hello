@@ -3,7 +3,12 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'npm start'
+                sh 'npm install'
+            }
+        }
+        stage('deploy') {
+            steps {
+                sh 'pm2 start index.js'
             }
         }
     }
